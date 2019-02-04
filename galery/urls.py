@@ -21,6 +21,6 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', TemplateView.as_view(template_name="base.html"), name='index'),
+    url(r'^$', TemplateView.as_view(template_name="base2.html"), name='index'),
     url(r'pictures/', include('pictures.urls', namespace='pictures'))
 ]+ static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
