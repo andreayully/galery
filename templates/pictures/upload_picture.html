@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="row">
+    <div class="col-sm-12">
+      <h1>INGRESO A PROGRAMA</h1>
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+              {{ form.as_p }}
+              <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div class="">
+      <h1>sdkfjsldkjf</h1>
+      <li>df</li>
+      {% for ph in photos %}
+      <img src="{{ph.image}}" alt="Italian Trulli">
+      <li>{{ph.title}}</li>
+      {% endfor %}
+    </div>
+</div>
+{% endblock %}
