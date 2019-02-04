@@ -12,12 +12,7 @@
         </form>
     </div>
     <div class="">
-      <h1>sdkfjsldkjf</h1>
-      <li>df</li>
-      {% for ph in photos %}
-      <img src="{{ph.image}}" alt="Italian Trulli">
-      <li>{{ph.title}}</li>
-      {% endfor %}
+        <a href="{% url 'pictures:list_picture' %}">Pictures</a> /
     </div>
 </div>
 {% endblock %}

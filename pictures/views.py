@@ -15,12 +15,17 @@ class PhotoCreateView(CreateView):
 
     def form_valid(self, form):
         photo = form.save(commit=False)
-        #photo.date_upload = 
+        #photo.date_upload =
         form.save()
         return super(PhotoCreateView, self).form_valid(form)
 
 class PhotoListView(ListView):
     model=Photo
     paginate_by= 5
-    context_object_name= 'photos'
-    template_name= 'pictures/upload_picture.html'
+    #context_object_name= 'photos'
+    template_name= 'pictures/list_picture.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(PhotoListView, self).get_context_data(**kwargs)
+        context['photos'] = Photo.objects.all()
+        return context
