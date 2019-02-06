@@ -10,7 +10,7 @@ import datetime
 class PhotoCreateView(CreateView):
     model=Photo
     form_class= PhotoForm
-    template_name = 'pictures/upload_picture.html'
+    template_name = 'pictures/portafolio_form.html'
     success_url = reverse_lazy('pictures:list_picture')
 
     def form_valid(self, form):
@@ -23,7 +23,7 @@ class PhotoListView(ListView):
     model=Photo
     paginate_by= 5
     #context_object_name= 'photos'
-    template_name= 'pictures/list_picture.html'
+    template_name= 'pictures/portafolio_list.html'
 
     def get_context_data(self, **kwargs):
         context = super(PhotoListView, self).get_context_data(**kwargs)
