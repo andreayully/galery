@@ -70,7 +70,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             <div class="col">
                 <ul class="breadcrumbs flex align-items-center">
                     <li><a href="{% url 'pictures:list_picture' %}">Home</a></li>
-                    <li><a href="{% url 'pictures:upload_picture' %}">Portfolio</li>
+                    <li><a href="{% url 'pictures:upload_picture' %}">Portfolio</a></li>
                 </ul><!-- .breadcrumbs -->
             </div><!-- .col -->
         </div><!-- .row -->
@@ -80,10 +80,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
           {% endblock %}
 
 
-        <div class="scroll-down flex flex-column justify-content-center align-items-center d-none d-lg-block">
-            <span class="arrow-down flex justify-content-center align-items-center"><img src="{% static "images/arrow-down.png" %}" alt="arrow"></span>
-            <span class="scroll-text">Scroll Down</span>
-        </div><!-- .scroll-down -->
+
     </div><!-- .container -->
 </div><!-- .outer-container -->
 

@@ -1,24 +1,42 @@
 {% extends 'portfolio.html' %}
+{% load bootstrap_tags %}
+{% load static %}
 
 {% block content %}
 
-<div class="col-12 col-lg-7">
-  <div class="content-area">
-    <div class="comments-form">
-        <div class="comment-respond">
-            <h3 class="comment-reply-title">Leave a comment</h3>
-            <form class="comment-form">
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <input type="url" placeholder="Website">
-                <textarea rows="4" placeholder="Messages"></textarea>
-                <input type="submit" value="send message">
-            </form><!-- .comment-form -->
-        </div><!-- .comment-respond -->
-    </div><!-- .comments-form -->
+<div class="row">
+  <div class="col-7 col-lg-8">
+    <h2>Some title</h2>
+    <form class="comment-form" action="" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+        {{ form|as_bootstrap}}
+        <input type="submit" value="send message">
+    </form><!-- .comment-form -->
+  </div><!-- .col-12 -->
+  <div class="col-5 col-lg-4">
+    <figure>
+      <img id="blah" src="{% static "images/comming_soon.jpg" %}" alt="your image" />
+  </figure>
   </div>
 </div>
+{% endblock %}
+{% block scripts %}
+<script>
+  function readURL(input) {
+          if (input.files && input.files[0]) {
+              var reader = new FileReader();
 
+              reader.onload = function (e) {
+                  $('#blah').attr('src', e.target.result);
+              }
 
+              reader.readAsDataURL(input.files[0]);
+          }
+      }
 
+      $("#id_image").change(function(){
+          readURL(this);
+      });
+
+</script>
 {% endblock %}
