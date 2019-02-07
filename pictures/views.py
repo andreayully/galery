@@ -5,6 +5,7 @@ from django.views.generic.list import ListView
 from pictures.models import Photo
 from pictures.forms import PhotoForm
 import datetime
+import json
 
 # Create your views here.
 class PhotoCreateView(CreateView):
@@ -27,5 +28,7 @@ class PhotoListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(PhotoListView, self).get_context_data(**kwargs)
+        data ={ 'name': 'yully'}
         context['photos'] = Photo.objects.all()
+        context['data'] = json.dumps(data)
         return context
