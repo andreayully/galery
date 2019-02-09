@@ -32,7 +32,7 @@
 <nav class="site-navigation flex flex-column justify-content-between">
     <ul class="main-menu flex flex-column justify-content-center">
         <li class="current-menu-item"><a href="{% url 'pictures:list_picture' %}">Home</a></li>
-        <li><a href="{% url 'pictures:upload_picture' %}"><i class="fa fa-plus-circle" style="font-size:24px"></i> Galeria</a></li>
+        <li><a href="{% url 'pictures:upload_picture' %}"><i class="fa fa-plus-circle" style="font-size:24px"></i> Galería</a></li>
         <li><a href="https://github.com/andreayully/galery" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a></li>
         <li><a href="https://twitter.com/andreaYully" target="_blank"><i class="fa fa-twitter" style="font-size:24px"></i> @andreaYully</a></li>
     </ul>
@@ -52,10 +52,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             <div class="col">
                 <ul class="breadcrumbs flex align-items-center">
                     <li><a href="{% url 'pictures:list_picture' %}">Home</a></li>
-                    <li><a href="{% url 'pictures:upload_picture' %}"><i class="fa fa-plus-circle" style="font-size:24px"></i> Galeria</a></li>
+                    <li><a href="{% url 'pictures:upload_picture' %}"><i class="fa fa-plus-circle" style="font-size:24px"></i> Galería</a></li>
                 </ul><!-- .breadcrumbs -->
             </div><!-- .col -->
         </div><!-- .row -->
+  
           {% block content %}
           {% endblock %}
     </div><!-- .container -->
