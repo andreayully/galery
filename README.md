@@ -18,5 +18,5 @@ Prototipo funcional de una Galeria de imagenes web que permite la vista previa d
 
 ### Caracteristicas
 - Django 1.11
-- Base de datos noSql - sql
+- Base de datos noSql - SQLite
 - Plantilla Bootstrap [https://colorlib.com/](https://colorlib.com/preview/#poportfolio)
