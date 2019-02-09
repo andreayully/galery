@@ -6,15 +6,12 @@
   <div class="col-12 col-md-6 col-lg-3">
     <div class="portfolio-content">
         <figure>
-            <img src="{% static "images/1.jpg" %}" alt="" width="500" height="600">
+            <img src="{% static "images/2.jpg" %}" alt="" width="500" height="600">
         </figure>
 
         <div class="entry-content flex flex-column align-items-center justify-content-center">
-            <h3><a href="#">Flower Skin</a></h3>
-
             <ul class="flex flex-wrap justify-content-center">
-                <li><a href="#">Portfolio,</a></li>
-                <li><a href="#">Tree</a></li>
+                <li><a href="{% url 'pictures:upload_picture' %}"><i class="fa fa-plus-circle" style="font-size:60px"></i></a></li>
             </ul>
         </div><!-- .entry-content -->
     </div><!-- .portfolio-content -->
