@@ -1,23 +1,23 @@
 # Ciclo de desarrollo Ágil
 
- En el clivo de vida agil se utilizan varias iteraciones o repeticiones de un proceso. Cada proceso de desarrollo se ejecuta por separado para cada caracteristica planteada.
+ En el clivo de vida ágil se utilizan varias iteraciones o repeticiones de un proceso. Cada proceso de desarrollo se ejecuta por separado para cada característica planteada.
 
-Cada proceso puede tener los siguientes pasos, que pueden variar segun la metodologia:
+Cada proceso puede tener los siguientes pasos, que pueden variar según la metodología:
 
-1. Analisis
+1. Análisis
 2. Diseño
 3. Desarrollo
-4. Integracion
+4. Integración
 5. Prueba
 
-Estas metodologias permiten crear soluciones intermedias por mediante la ejecucion del desarrollo por separado para cada funcionalidad.
+Estas metodologías permiten crear soluciones intermedias por mediante la ejecución del desarrollo por separado para cada funcionalidad.
 ___
-## Pasos para desarrollar una aplicacion Web
+## Pasos para desarrollar una aplicación Web
 
-| Informacion | Planeación| Diseño|
-| ------------- |:-------------:| -----:|
+| Información | Planeación| Diseño|
+| ------------- |-------------| -----|
 | Comprender la necesidad| Investigacion/Arquitectura a utilizar/prototipado| Identidad visual |
 
-| Desarrollo | Lanzamiento |Matenimiento
+| Desarrollo | Lanzamiento |Mantenimiento
 |----------|--------|------------|
-|FrameWork/BD/Seguridad|Documentacion / metrica|Soporte /mantenimiento
+|FrameWork/BD/Seguridad|Documentación / métrica|Soporte /mantenimiento
