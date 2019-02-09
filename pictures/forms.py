@@ -8,3 +8,5 @@ class PhotoForm(ModelForm):
         model=Photo
         exclude=['date_upload']
         fields=['title', 'image']
+        widgets={
+        'image': forms.ClearableFileInput(attrs={'id':"id_image", 'size':"520"})}
