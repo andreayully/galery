@@ -6,7 +6,7 @@ Prototipo funcional de una Galeria de imagenes web que permite la vista previa d
   * Pre-requisitos Python 3.+ y Virtualenv
 
   1. Crear ambiente virtual **virtualenv galery_env** y activar el ambiente **source galery_env/bin/activate**
-  2. Clonar el proyecto **git clone https://github.com/andreayully/galery.git** y 
+  2. Clonar el proyecto **git clone https://github.com/andreayully/galery.git** 
   3. **cd galery/** 
       
       - Instalar requerimientos **pip install -R requirements.txt**
