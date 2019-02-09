@@ -1,0 +1,12 @@
+{% extends 'base2.html' %}
+{% block content %}
+
+{% for ph in photos %}
+
+<h1>{{ph.date_upload}}</h1>
+<img src="{{ph.image.url}}" alt="{{ph.title}}" height="300" width="300">
+
+{% endfor %}
+
+
+{% endblock %}

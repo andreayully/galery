@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="{%static "css/font-awesome.min.css"%}">
+    <!-- Styles -->
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+<header class="site-header">
+    <div class="hamburger-menu">
+        <div class="menu-icon">
+            <img src="{% static "images/menu-icon.png" %}" alt="menu icon">
+        </div><!-- .menu-icon -->
+
+        <div class="menu-close-icon">
+            <img src="{% static "images/x.png" %}" alt="menu close icon">
+        </div><!-- .menu-close-icon -->
+    </div><!-- .hamburger-menu -->
+</header><!-- .site-header -->
+
+<nav class="site-navigation flex flex-column justify-content-between">
+    <ul class="main-menu flex flex-column justify-content-center">
+        <li class="current-menu-item"><a href="{% url 'pictures:list_picture' %}">Home</a></li>
+        <li><a href="{% url 'pictures:upload_picture' %}"><i class="fa fa-plus-circle" style="font-size:24px"></i> Galeria</a></li>
+        <li><a href="https://github.com/andreayully/galery" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a></li>
+        <li><a href="https://twitter.com/andreaYully" target="_blank"><i class="fa fa-twitter" style="font-size:24px"></i> @andreaYully</a></li>
+    </ul>
+
+<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p>
+
+</nav><!-- .site-navigation -->
+
+<div class="nav-bar-sep d-lg-none"></div>
+
+<div class="outer-container">
+    <div class="container portfolio-page">
+        <div class="row">
+            <div class="col">
+                <ul class="breadcrumbs flex align-items-center">
+                    <li><a href="{% url 'pictures:list_picture' %}">Home</a></li>
+                    <li><a href="{% url 'pictures:upload_picture' %}"><i class="fa fa-plus-circle" style="font-size:24px"></i> Galeria</a></li>
+                </ul><!-- .breadcrumbs -->
+            </div><!-- .col -->
+        </div><!-- .row -->
+          {% block content %}
+          {% endblock %}
+    </div><!-- .container -->
+</div><!-- .outer-container -->
+
+<script type='text/javascript' src='{% static "js/jquery.js" %}'></script>
+<script type='text/javascript' src='{% static "js/custom.js" %}'></script>
+
+{% block scripts %}
+{% endblock %}
+
+</body>
+</html>

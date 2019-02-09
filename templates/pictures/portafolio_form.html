@@ -1,0 +1,55 @@
+{% extends 'portfolio.html' %}
+{% load bootstrap_tags %}
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-7 col-lg-8">
+    <h2>Carga tu Imagen</h2>
+    <form id="formulario" class="comment-form" action="" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+        {{ form|as_bootstrap}}
+        <input type="submit" value="Guardar">
+    </form><!-- .comment-form -->
+  </div><!-- .col-12 -->
+  <div class="col-5 col-lg-4">
+    <figure>
+      {% if isUpdate %}
+      <img id="blah" src="{{ph.image.url}}" alt="your image" size="5120" />
+      {% else %}
+      <img id="blah" src="{% static "images/comming_soon.jpg" %}" alt="your image" size="5120" />
+      {% endif %}
+  </figure>
+  </div> <!-- col5 -->
+</div> <!-- row -->
+{% endblock %}
+{% block scripts %}
+<script>
+  function readURL(input) {
+          if (input.files && input.files[0]) {
+              var reader = new FileReader();
+              reader.onload = function (e) {
+                  $('#blah').attr('src', e.target.result);
+              }
+              reader.readAsDataURL(input.files[0]);
+          }
+      }
+      $("#id_image").change(function(){
+          readURL(this);
+      });
+
+//Valida envio.
+$('#formulario').submit(function() {
+  var fileSize = $('#id_image')[0].files[0].size;
+  var sizekiloBytes = parseInt(fileSize / 1024);
+
+  if (sizekiloBytes >  $('#id_image').attr('size')) {
+    alert('El tamaño supera el limite permitido!');
+    return false;
+  }
+
+});
+
+</script>
+{% endblock %}

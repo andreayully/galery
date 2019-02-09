@@ -1,0 +1,38 @@
+{% extends 'base2.html' %}
+{% load bootstrap_tags %}
+
+
+{% block content %}
+<div class="row">
+    <div class="col-sm-12">
+      <h1>Subir Imagen</h1>
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+              {{ form|as_bootstrap}}
+              <img id="blah" src="#" alt="your image" />
+              <input type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  function readURL(input) {
+          if (input.files && input.files[0]) {
+              var reader = new FileReader();
+
+              reader.onload = function (e) {
+                  $('#blah').attr('src', e.target.result);
+              }
+
+              reader.readAsDataURL(input.files[0]);
+          }
+      }
+
+      $("#id_image").change(function(){
+          readURL(this);
+      });
+
+</script>
+{% endblock %}
